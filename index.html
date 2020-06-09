@@ -12,15 +12,41 @@
 <body>
   <h1 class="jumbotron">Stress Tester</h1>
   <form id="input">
-    <div class="container" id="stress-symptoms">
-      <p>The following options are common signs of stress, please check all that apply</p>
-        <input type="checkbox" name="stress" value="Anxiety"> Anxiety<br>
-        <input type="checkbox" name="stress" value="Headache"> Headache<br>
-        <input type="checkbox" name="stress" value="Shallow Breath"> Shallow Breath<br>
-        <input type="checkbox" name="stress" value="Insomnia"> Insomnia<br>
-        <input type="checkbox" name="stress" value="Irritability"> Irritability<br>
-        <input type="checkbox" name="stress" value="Isolation"> Isolation<br>
+    <div class="container">
+      <div class="form-group" id="stress-symptoms">
+        <p>The following options are common signs of stress, please check all that apply:</p>
+          <input type="checkbox" name="stress" value="Anxiety"> Anxiety<br>
+          <input type="checkbox" name="stress" value="Headache"> Headache.<br>
+          <input type="checkbox" name="stress" value="Shallow Breath"> Shallow Breath.<br>
+          <input type="checkbox" name="stress" value="Insomnia"> Insomnia<br>
+          <input type="checkbox" name="stress" value="Irritability"> Irritability.<br>
+          <input type="checkbox" name="stress" value="Isolation"> Isolation.<br>
+      </div>
+      <div class="form-group" id="health-symptoms">
+        <p>The following options are common health sypmtoms of high levels of stress, please check all that apply:</p>
+        <input type="checkbox" name="symptom" value="High Blood Pressure"> High Blood Pressure<br>
+        <input type="checkbox" name="symptom" value="Loss of Hair"> Loss of Hair<br>
+        <input type="checkbox" name="symptomr" value="Loss of Appetite"> Loss of Appetite<br>
+        <input type="checkbox" name="symptom" value="Heart Attack"> Heart Attack<br>
+        <input type="checkbox" name="symptom" value="Depression"> Depression<br>
+        <input type="checkbox" name="symptom" value="Low Immunity"> Low Immunity<br>
+      </div>
+      <div class="form-group" id="stress-relievers">
+        <p>The following options include common stress relievers, please check all that apply:</p>
+        <input type="checkbox" name="reliever" value="Meditation"> Meditation<br>
+        <input type="checkbox" name="reliever" value="Exercise"> Exercise<br>
+        <input type="checkbox" name="reliever" value="Sleep"> Sleep<br>
+        <input type="checkbox" name="reliever" value="Healthy Diet"> Healthy Diet<br>
+        <input type="checkbox" name="reliever" value="Positive Visualization"> Positive Visualization<br>
+        <input type="checkbox" name="reliever" value="Therapy"> Therapy Sessions<br>
+        
+      </div>
+      <button type="submit" class="btn">Submit</button>
     </div>
+    
   </form>
+  <div id="output">
+
+  </div>
 </body>
 </html>
