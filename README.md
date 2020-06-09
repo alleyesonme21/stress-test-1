@@ -1,6 +1,6 @@
 # _Stress Test_
 #### _This website was created to act as a helpful tool to those looking to moniter their stress level, 6/5/2020_
-#### By _**Kyle Hubbard**_
+#### By _**Kyle Hubbard, Megan Hepner, Johnny Duverseau**_
 ## Description
 _This site will contain a brief quiz in which users will input basic information about themselves which will then be compiled into a suggestion on how to best manage their stress level_
 
