@@ -1,57 +1,70 @@
 // business Logic
+function checkLevel(array) {
+  if (array.length <= 2) {
+    return "Low"
+  } else if (array.length > 2 && array.length <= 4) {
+    return "Medium"
+  } else {
+    return "High"
+  }
+};
 
+function alarmingOrNot(string1, string2) {
+
+  if (string1 === "High" || string2 === "High") {
+    return "High" 
+  } else if (string1 === "Medium" || string2 === "Medium") {
+    return "Medium"
+  } else if (string1 === "Low" || string2 === "Low") {
+    return "Low"
+  } 
+};
+
+function whatWeThink(result) {
+  if ( result === "Low") {
+    return "So we think you're fine..."
+  } else if ( result === "Medium") {
+    return "You could use some more stress relieving activities"
+  } else if (result === "High") {
+    return "Please get help."
+  }
+}
 //UI logic
 
 $(document).ready(function() {
   $("#input").submit(function(event) {
     let stress = [];
-    let stressLevel = null;
     let symptom = [];
-    let symptomLevel = null;
     let reliever = [];
-    let relieverLevel = null;
     event.preventDefault();
     $("#output").show();
     $("input:checkbox[name=stress]:checked").each(function() {
       stress.push($(this).val());
     });
-    if (stress.length <= 2) {
-      stressLevel = "Low";
-    } else if (stress.length > 2 && stress.length <= 4) {
-      stressLevel = "Medium";
-    } else {
-      stressLevel = "High";
-    }
+
+    const stressLevel = checkLevel(stress);
 
     $("input:checkbox[name=symptom]:checked").each(function() {
       symptom.push($(this).val());
     });
 
-    if (symptom.length <= 2) {
-      symptomLevel = "Low";
-    } else if (symptom.length > 2 && symptom.length <= 4) {
-      symptomLevel = "Medium"
-    } else {
-      symptomLevel = "High"
-    }
+    const symptomLevel = checkLevel(symptom);
 
     $("input:checkbox[name=reliever]:checked").each(function() {
       reliever.push($(this).val());
     });
 
-    if (reliever.length <= 2) {
-      relieverLevel = "Low";
-    } else if (reliever.length > 2 && reliever.length <= 4) {
-      relieverLevel = "Medium"
-    } else {
-      relieverLevel = "High"
-    }
+    const relieverLevel = checkLevel(reliever);
 
     $("#output").append("Your stress is: " + stressLevel + "<br>")
     $("#output").append("Your health risk is: " + symptomLevel + "<br>")
     $("#output").append("Your stress relieving activity is: " + relieverLevel + "<br>")
 
-  if (relieverLevel ===)
+    const symptomAndHealth = alarmingOrNot(stressLevel, symptomLevel);
+    const result = alarmingOrNot(relieverLevel, symptomAndHealth);
+    const ourOutput = whatWeThink(result);
 
+    $("#output").append(ourOutput)
   });
 });
+
